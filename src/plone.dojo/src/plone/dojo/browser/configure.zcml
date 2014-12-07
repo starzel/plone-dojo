@@ -28,7 +28,7 @@
     <browser:page
         name="dojo"
         for="*"
-        class=".views.DojoView"
+        class=".dojo.DojoView"
         template="dojo.pt"
         permission="zope2.View"
         />
