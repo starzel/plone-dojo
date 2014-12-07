@@ -50,6 +50,7 @@ Same as Windows: Use `VirtualBox <https://www.virtualbox.org>`_ and `Vagrant <ht
 Installation with vagrant
 =========================
 
+**Use this option if you can't run Plone natively on your system because you either use Windows or do not have Python 2.7 installed.**
 
 Install VirtualBox
 ------------------
