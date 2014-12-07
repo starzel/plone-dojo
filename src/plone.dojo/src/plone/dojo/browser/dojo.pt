@@ -1,0 +1,3 @@
+<h1 tal:content="python: view.dojo()">
+    Hello World!
+</h1>

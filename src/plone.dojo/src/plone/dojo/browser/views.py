@@ -29,3 +29,14 @@ class DemoView(BrowserView):
                 logger.info("No elements of type {0}".format(ct))
 
         return results
+
+
+class DojoView(BrowserView):
+    """A browser view.
+    """
+
+    def dojo(self):
+        """Add code here.
+        """
+
+        return "Hello Plone!"
