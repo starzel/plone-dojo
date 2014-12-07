@@ -10,6 +10,7 @@ bin/
 buildout-cache/
 develop-eggs/
 parts/
+src/*
 !src/plone
 var/
 htmlcov/
@@ -18,5 +19,3 @@ htmlcov/
 *.log
 output.xml
 *.swp
-packages/
-py27/
