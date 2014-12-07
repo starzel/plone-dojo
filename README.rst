@@ -81,14 +81,12 @@ Setup Vagrant to automatically install the current guest-additions. You can choo
 
     $ vagrant plugin install vagrant-vbguest
 
-Now either get the attached zip-file (if you read this as a mail) or download it from http://www.starzel.de/vagrant.zip
-
-and copy its contents into your training directory.
+Now download the vagrant config for the dojo and unzip its contents into your training directory.
 
 .. code-block:: bash
 
     $ wget http://www.starzel.de/vagrant.zip
-    $ unzip plone_training_config.zip
+    $ unzip vagrant.zip
 
 The training-directory should now hold the file ``Vagrantfile`` and the directory ``manifests`` which again contains several files.
 
@@ -136,11 +134,9 @@ Once Vagrant finishes the provisioning-process, you can login to the now running
 
     If you use Windows you'll have to login with `putty <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_. Connect to vagrant@127.0.01 at port 2222. User **and** password are ``vagrant``.
 
-You are now logged in as the user vagrant in ``/home/vagrant``. We'll do all steps of the training as this user.
+You are now logged in as the user vagrant in ``/home/vagrant``. We'll do everything as this user.
 
-We pre-installed a fresh Plone for you in the folder ``/home/vagrant/Plone/zinstance`` You can run it now and access it from the browser. We will **not** use this Plone-instance in the training, so you can play around with it as much as you want.
-
-Instead we use our own Plone-instance during the training. It is in ``/vagrant/buildout/``. Start it in foreground with ``./bin/instance fg``.
+Plone is now found in ``/vagrant/buildout/``. Start it in foreground with ``./bin/instance fg``.
 
 .. code-block:: bash
 
@@ -157,13 +153,13 @@ Now the Zope-instance we're using is running. You can stop the running instance 
 
 If you point your local browser at http://localhost:8080 you see that Plone is running in vagrant. This works because Virtualbox forwards the port 8080 from the guest-system (the vagrant-Ubuntu) to the host-system (your normal operating-system). Now create a new Plone site by clicking "Create a new Plone site". The username and the password are both "admin" (Never do this on a real site!).
 
-The Buildout for this Plone is in a shared folder, this means we run it in the vagrant-box from ``/vagrant/buildout`` but we can also access it in out own operating-system and use our favorite editor. You will find the directory ``buildout`` in the directory ``training`` that you created in the very beginning next to ``Vagrantfile`` and ``manifests``.
+The buildout for this Plone is in a shared folder, this means we run it in the vagrant-box from ``/vagrant/buildout`` but we can also access it in out own operating-system and use our favorite editor. You will find the directory ``buildout`` in the directory ``training`` that you created in the very beginning next to ``Vagrantfile`` and ``manifests``.
 
 .. note::
 
     The database and the python-packages are not accessible in you own system since large files cannot make use of symlinks in shared folders. The database lies in ``/home/vagrant/var``, the python-packages are in ``/home/vagrant/packages``.
 
-If you have any problems or questions please mail us at team@starzel.de or create a ticket at https://github.com/plone/training/issues.
+If you have any problems or questions please mail me at bauer@starzel.de.
 
 
 What Vagrant does
